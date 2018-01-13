@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+
+.cn-wrapper {
+  width: 90%;
+  height: auto;
+  overflow: hidden;
+  z-index: 10;
+  margin: 50px auto;
+  border-radius: 50%;
+  position:relative;
+}
+.cn-wrapper ul {
+	width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative
+}
+.cn-wrapper ul li{
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:50%;
+	height: 50%;
+	border:solid 1px #fff;
+	transform-origin: 100% 100%;
+	margin-left: -50%;
+	overflow: hidden;
+	font-size:50px;
+	background:#cdec81 ;
+}
+.cn-wrapper ul li:nth-child(even){
+	background: green;
+}
+.cn-wrapper ul li:nth-child(odd){
+	background: #6F325C;
+}
+.cn-wrapper ul li:nth-child(1){
+	transform: rotate(0deg) skew(45deg);
+	background: #cdec81;
+}
+.cn-wrapper ul li:nth-child(2){
+	transform: rotate(45deg) skew(45deg);
+	background: #5e982d;
+}
+.cn-wrapper ul li:nth-child(3){
+	transform: rotate(90deg) skew(45deg);
+	background: #76af36;
+}
+.cn-wrapper ul li:nth-child(4){
+	transform: rotate(135deg) skew(45deg);
+	background: #90c73d;
+}
+.cn-wrapper ul li:nth-child(5){
+	transform: rotate(180deg) skew(45deg);
+	background: #a4cf41;
+}
+.cn-wrapper ul li:nth-child(6){
+	transform: rotate(225deg) skew(45deg);
+	background: #b3db47;
+}
+.cn-wrapper ul li:nth-child(7){
+	transform: rotate(270deg) skew(45deg);
+	background: #bfe44a;
+}
+.cn-wrapper ul li:nth-child(8){
+	transform: rotate(315deg) skew(45deg);
+	background: #cae64e;
+}
+.cn-wrapper ul li span{
+	color: #fff;
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	bottom: -35%;
+	right: -35%;
+	text-align: center;
+	transform: skew(-45deg) rotate(-68deg);
+}
+.cn-wrapper ul li:nth-child(1) span{
+	transform: skew(-45deg) rotate(0deg) translateX(-40%) translateY(30%);
+}
+.cn-wrapper ul li:nth-child(2) span{
+	transform: skew(-45deg) rotate(-45deg) translateX(-20%) translateY(10%);
+}
+.cn-wrapper ul li:nth-child(3) span{
+	transform: skew(-45deg) rotate(-90deg) translateX(10%) translateY(8%);
+}
+
+.cn-wrapper ul li:nth-child(4) span{
+	transform: skew(-45deg) rotate(-135deg) translateX(25%) translateY(30%);
+}
+.cn-wrapper ul li:nth-child(5) span{
+	transform: skew(-45deg) rotate(-180deg) translateX(30%) translateY(50%);
+}
+.cn-wrapper ul li:nth-child(6) span{
+	transform: skew(-45deg) rotate(-225deg) translateX(10%) translateY(75%);
+}
+.cn-wrapper ul li:nth-child(7) span{
+	transform: skew(-45deg) rotate(-270deg) translateX(-10%) translateY(75%);
+}
+.cn-wrapper ul li:nth-child(8) span{
+	transform: skew(-45deg) rotate(-315deg) translateX(-30%) translateY(55%);
+}
+.cn-wrapper .circle{
+	width: 40%;
+	height:40%;
+	position:absolute;
+	top:50%;
+	left: 50%;
+	margin-top:-20%;
+	margin-left: -20%;
+	background: #fff;
+	z-index:999;
+	border-radius: 50%;
+}
+
+	</style>
+	<body>
+		<div class="cn-wrapper" id="cn-wrapper">
+			<div class="circle"></div>
+		   <ul>
+		       <li><span>外观</span></li>
+		       <li><span>内室</span></li>
+		       <li><span>标识</span></li>
+		       <li><span>机舱</span></li>
+		       <li><span>粘贴</span></li>
+		       <li><span>调试</span></li>
+		       <li><span>清洁</span></li>
+		       <li><span>着车检测</span></li>
+		   </ul>
+		</div>
+		<script>
+		(function(){
+			var autoHeight=id("cn-wrapper").offsetWidth;
+			id("cn-wrapper").style.height=autoHeight+"px";
+			var shanYe=id("cn-wrapper").querySelectorAll("li");
+			[].slice.call(shanYe).forEach(function(ele){
+				ele.style.height=autoHeight/2+"px";
+			});
+			function id(obj){
+				return document.getElementById(obj);
+			}
+		})()
+			
+		</script>
+	</body>
+</html>
